@@ -201,6 +201,42 @@ console.log("Esta es el almacenamiento que escojistes: " + almacenamiento);
     // break
 }
 
+// FUNCION CONSTRUCTORA SOLICITADA UTILIZANDO FORREACH-----------------------------------
+
+
+class Objeto {
+    constructor(nombre, apellido, anios) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.anios = anios;
+    }
+    saludar() {
+    console.log(`Hola, mi nombre es ${this.nombre} y mi apellido es ${this.apellido}. Tengo ${this.anios} años.`);
+    }
+}
+
+
+const objeto1 = new Objeto("Pepe", "Ramirez", 10);
+const objeto2 = new Objeto("Juan", "Perez", 20);
+const objeto3 = new Objeto("Daniel", "Ramos", 30);
+const objeto4 = new Objeto("Jhunior", "Ramos", 40);
+
+const arrayObjetos = [];
+arrayObjetos.push(objeto1);
+arrayObjetos.push(objeto2);
+arrayObjetos.push(objeto3);
+arrayObjetos.push(objeto4);
+
+arrayObjetos.forEach(objeto => {
+    objeto.saludar();
+});
+
+console.log(arrayObjetos);
+
+
+
+// -----------------------------------------------------------------
+
 function Gracias(guion){
     this.guion = guion;
 
